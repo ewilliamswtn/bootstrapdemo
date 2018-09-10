@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Bootstrap Demo</title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#">Boostrap Demo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="mediaDemoButton">Media Breakpoints<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="colButton">Grid and Columns</a>
+        </li>
+<!--         <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="mediaDemoWrapper" class="mediaDemoWrapper">
+    <div class="headerDiv cards">
+      <h2>Media Queries and Breakpoints</h2>
+    </div>
+
+
+    <div class="container-fluid breakpointWrapper cards">
+      <div class="row justify-content-md-center">
+        <div class="col BPTopWrapper">
+          <h5> - Screen size and device description - </h5>
+        </div>
+      </div>
+      <div class="row justify-content-md-center BPDescWrapper">
+        <div class="col">
+        </div>
+        <div class="col-auto">
+          <span class="demoSpan demoXS">XS | 575px and down | Phones in portait</span>
+          <span class="demoSpan demoS">S | 576px and up | Phones in landscape</span>
+          <span class="demoSpan demoM">M | 768px and up | Tablets</span>
+          <span class="demoSpan demoL">L | 992px and up | Desktop monitors</span>
+          <span class="demoSpan demoXL">XL | 1200px and up | Large desktop monitors</span>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="resizeDiv">
+        <span> - Resize to see breakpoint change - </span>
+      </div>
+      <div class="rightArrowDiv breakpoint">
+        <span>Breakpoint   </span><i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Media Breakpoint, Start Grids and Columns -->
+
+  <div class="colWrapper" id="colWrapper">
+
+    <div class="spanWrapper">
+      <span>In the Bootstrap grid, each row can hold up to 12 size 1 columns. </span>
+
+      <span>In the row below, there is a single grey column. Click the select input below to change the column size.</span>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-1 card" id="changeCol"></div>
+      </div>
+    </div>
+
+    <div class="selectWrapper">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Select size</label>
+        </div>
+        <select class="custom-select" id="colSize" onchange="changeFunc()">
+          <!-- <option selected>Choose...</option> -->
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+    </div>
+    
+
+    <div class="spanWrapper">
+      <span>In the row below, there are 3 columns. The middle column has a variable size, changing based on the size of it's contents, but the 3 columns will always fill up the row.  Type in the input to change the content.</span>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center colRowWrapper">
+        <div class="col card">
+          
+        </div>
+        <div class="col-s-auto card outputChangeCol" id="contentOutput">
+          Variable column. Type to change.
+        </div>
+        <div class="col card">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="inputWrapper">
+      <div class="input-group input-group-sm mb-3 colWrapper">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Input content</span>
+        </div>
+        <input id="contentInput" oninput="contentOutputFunc()" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>  
+    </div>
+  </div>
+
+
+
+
+
+
+
+ 
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+/* header */
+.headerDiv {
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+/* media queries */
+
+
+#colWrapper {
+	display: none;
+	padding-top: 25px;
+}
+
+
+.demoSpan {
+	padding-bottom: 25px;
+	display: none;
+}
+
+@media (max-width: 575px) {
+	.demoSpan {
+		display: none;
+	}
+	.demoXS {
+		display: inline;
+	}
+	.breakpoint {
+		visibility: hidden;
+	}
+}
+
+@media (min-width: 576px) {
+	.demoSpan {
+		display: none;
+	}
+	.demoS {
+		display: inline;
+	}
+	.breakpoint {
+		width: 576px;
+	}
+}
+
+@media (min-width: 768px) {
+	.demoSpan {
+		display: none;
+	}
+	.demoM {
+		display: inline;
+	}
+	.breakpoint {
+		width: 768px;
+	}
+}
+
+@media (min-width: 992px) {
+	.demoSpan {
+		display: none;
+	}
+	.demoL {
+		display: inline;
+	}
+	.breakpoint {
+		width: 992px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.demoSpan {
+		display: none;
+	}
+	.demoXL {
+		display: inline;
+	}
+	.breakpoint {
+		width: 1200px;
+	}
+}
+
+/* first set of containers */
+.breakpointWrapper {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.BPTopWrapper {
+	text-align: center;
+}
+
+.BPDescWrapper {
+}
+
+.resizeDiv {
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+
+.midArrowDiv {
+	text-align: center;
+}
+
+.rightArrowDiv {
+	text-align: right;
+	padding-bottom: 25px;
+}
+
+
+.colRowWrapper {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.inputWrapper {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.colChangeWrapper {
+}
+
+.selectWrapper {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-bottom: 100px;
+}
+
+#changeCol {
+	height: 50px;
+	background-color: #ced4da;
+	margin-bottom: 15px;
+}
+
+.outputChangeCol {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.spanWrapper {
+	text-align: center;
+	padding: 25px;
+}
